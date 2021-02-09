@@ -1,0 +1,41 @@
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="bg"></div>
+</div>
+<div class="p-5 p-md-5 m-md-3 bg-light">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6 offset-xl-1 offset-md-1 order-md-1 mb-5 mb-md-0">
+      <div class="text-center">
+        <img src="../../../assets/img/login.jpg" alt="..." class="img-fluid" class="p-5" style="border: 1px solid rgb(216, 216, 216);">
+      </div>
+    </div>
+    <div class="col-12 col-md-5 col-xl-4 order-md-2 my-5 p-6" style="border: 1px solid rgb(216, 216, 216);">
+      <!-- Heading -->
+      <h1 class="display-4 text-center mb-3">Sign in</h1>
+      <!-- Form -->
+      <form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)" class="form-signin">
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" placeholder="Enter email" name="email" [(ngModel)]="user.email">
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <label for="password">Password</label>
+            </div>
+          </div> <!-- / .row -->
+          <!-- Input group -->
+          <div class="input-group input-group-merge">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" [(ngModel)]="user.password">
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-lg btn-primary btn-block mb-3" [disabled]="loginform.invalid">Sign in</button>
+      </form>
+
+    </div>
+
+  </div> <!-- / .row -->
+</div> <!-- / .container -->

@@ -1,0 +1,109 @@
+<div class="position-relative overflow-hidden p-3 text-center bg-light">
+    <h1>Open Bank Account</h1>
+</div>
+<div class="p-5 p-md-5 m-md-3 bg-light">
+    <div class="card">
+        <form #createbankaccount="ngForm" (ngSubmit)="onSubmit(createbankaccount)">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="firstname">First Name&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name"
+                        [(ngModel)]="customer.firstname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="middlename">Middle Name</label>
+                    <input type="text" class="form-control" id="middlename" name="middlename" placeholder="Middle Name"
+                        [(ngModel)]="customer.middlename">
+                </div>
+                <div class="form-group">
+                    <label for="lastename">Last Name&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name"
+                        [(ngModel)]="customer.lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth&nbsp;<span style="color: red;">*</span></label>
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="dob" name="dob" placeholder="Date of Birth"
+                            ngbDatepicker #d="ngbDatepicker" [(ngModel)]="customer.dateofbirth" readonly required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i
+                                    class="bi bi-calendar">Calender</i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="gender">Gender&nbsp;<span style="color: red;">*</span></label>
+                    <select id="gender" class="form-control" required>
+                        <option value="0">-- Select Gender --</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div> -->
+                <div class="form-group">
+                    <label for="gender">Gender&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="gender" name="gender" placeholder="Enter Gender"
+                        [(ngModel)]="customer.gender" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email&nbsp;<span style="color: red;">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"
+                        [(ngModel)]="customer.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password&nbsp;<span style="color: red;">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password"
+                        placeholder="Enter Password" [(ngModel)]="customer.password" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact&nbsp;<span style="color: red;">*</span></label>
+                    <input type="tel" class="form-control" id="contact" name="contact" placeholder="Enter Contact"
+                        [(ngModel)]="customer.contact" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="pan">PAN&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="pan" name="pan" placeholder="Enter PAN Number"
+                        [(ngModel)]="customer.pan" required>
+                </div>
+                <div class="form-group">
+                    <label for="nationality">Nationality&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="nationality" name="nationality"
+                        placeholder="Enter Nationality" [(ngModel)]="customer.nationality" required>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary&nbsp;<span style="color: red;">*</span></label>
+                    <input type="number" class="form-control" id="salary" name="salary" placeholder="Enter Salary"
+                        [(ngModel)]="customer.salary" maxlength="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="street">Street&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="street" name="street" placeholder="Enter Street"
+                        [(ngModel)]="customer.street" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Enter City"
+                        [(ngModel)]="customer.city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="state" name="state" placeholder="Enter State"
+                        [(ngModel)]="customer.state" maxlength="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="pin">Pin&nbsp;<span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="pin" name="pin" placeholder="Enter Pin"
+                        [(ngModel)]="customer.pin" required>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <!-- Submit -->
+                        <button type="submit" class="btn btn-lg btn-block btn-primary mb-3">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

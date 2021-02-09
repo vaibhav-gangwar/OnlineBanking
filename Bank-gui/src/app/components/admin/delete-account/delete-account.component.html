@@ -1,0 +1,36 @@
+<div class="position-relative overflow-hidden p-3 text-center bg-light">
+    <h1>Delete Account</h1>
+</div>
+<div class="p-5 p-md-5 m-md-3 bg-light">
+    <div class="card">
+        <div class="card-header title">
+             <h4 class="my-0 card-title heading font-weight-bold">Details</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-nowrap">
+                    <thead>
+                        <tr>
+                            <th scope="col" >#</th>
+                            <th scope="col" >Name</th>
+                            <th scope="col" >Email</th>
+                            <th scope="col">Account No</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let item of allAccount; let i = index">
+                        <tr>
+                            <td>{{i+1}}</td>
+                            <td>{{item.customer.firstname+" "+item.customer.middlename+" "+item.customer.lastname}}</td>
+                            <td>{{item.customer.email}}</td>
+                            <td>{{item.accountNumber}}</td>
+                            <td>{{item.balance}}</td>
+                            <td><a class="btn btn-danger btn-sm" (click)="deleteAccount(item.customer.customerid)">Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

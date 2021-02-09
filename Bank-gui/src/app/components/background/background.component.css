@@ -1,0 +1,35 @@
+.bg {
+    background-image: url('../../../assets/img/homebanner.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:350px;
+}
+#browser_cache { padding: 0px !important; }
+#browser_cache p { border: 2px solid rgb(216, 216, 216); text-align: center; margin: 5px; padding: 10px; color: blue; }
+
+#logo, #osbi_logo, #reset, #fontSizePlus, #theme1, #theme2, .fb, .yt, .tw, #personal_icon, #corporate_icon, .slider-item-markers li a, .slider-item-markers li.active-marker a, .accept, .reject, #left_navigate, #right_navigate, .netbanking_button, .netbanking_button_up { background-image: url("../../../assets/img/sprite.png"); }
+
+#banking { color: rgb(51, 51, 51) !important; }
+.banking_section { border: 1px solid rgb(216, 216, 216); background: rgb(248, 248, 248); text-align: center; min-height:242px;}
+.box1, .box2 { padding: 0px 5px !important; }
+#personal_icon { background-position: -13px -88px; width: 42px; height: 46px; display: inline-block; margin: 7px 0px; }
+#corporate_icon { background-position: -104px -90px; width: 76px; height: 44px; display: inline-block; margin: 7px 0px; }
+.corp_icon{display: inline-block;margin: 10px 0px 12px;}
+.personal { display: block; color: rgb(2, 2, 2); font-size: 18px; }
+.personal_highlight { color: rgb(38, 111, 160); }
+.login { padding: 10px 0 0; background: rgb(255, 255, 255); margin: 10px 0px; overflow: hidden; min-height: 45px; display:inline-block; }
+.login-new { width: 120px !important; padding: 7px 0px !important; background: none !important; }
+.new_version { width: 155px !important; }
+.login-new span { padding: 7px 15px; }
+.login-new .classicTxt { background: rgb(0, 51, 102); }
+.login-new .classicImg { background: rgb(2, 45, 88); }
+.login-new .newTxt { background: rgb(0, 77, 153); }
+.login-new .newImg { background: rgb(4, 68, 131); }
+.login a { background: rgb(12, 55, 106); color: rgb(255, 255, 255); padding: 6px 10px; margin: 0px 5px; font-weight: bold; }
+.login a:hover { text-decoration: none; color: rgb(255, 255, 255) !important; }
+.login a.corp_login { margin: 0px 15px !important; padding: 7px 25px;}
+.logincorp{padding-top:16px;}

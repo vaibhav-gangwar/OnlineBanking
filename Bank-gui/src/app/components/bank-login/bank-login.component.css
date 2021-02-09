@@ -1,0 +1,19 @@
+.title{
+    color: aliceblue;
+}
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.bg {
+    background-image: url('../../../assets/img/corporatebankbanner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:200px;
+}

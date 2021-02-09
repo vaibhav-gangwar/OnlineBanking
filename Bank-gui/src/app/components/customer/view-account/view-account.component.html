@@ -1,0 +1,42 @@
+<div class="position-relative overflow-hidden p-3 text-center bg-light">
+  <h1>Account Detail</h1>
+</div>
+<div class="p-5 p-md-5 m-md-3 bg-light">
+  <div class="card card-primary card-outline">
+    <div class="card-body box-profile">
+      <ul class="list-group list-group-unbordered mb-3">
+        <li class="list-group-item">
+          <b>Name</b> <label class="float-right">{{viewaccount.customer.firstname+" "+viewaccount.customer.middlename+" "+viewaccount.customer.lastname}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>Account No</b> <label class="float-right">{{viewaccount.accountNumber}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>Email</b> <label class="float-right">{{viewaccount.customer.email}}</label>
+        </li>
+        <!-- <li class="list-group-item">
+          <b>Date of Birth</b> <label class="float-right">{{viewaccount.customer.dateofbirth}}</label>
+        </li> -->
+        <li class="list-group-item">
+          <b>Gender</b> <label class="float-right">{{viewaccount.customer.gender}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>Contact</b> <label class="float-right">{{viewaccount.customer.contact}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>PAN</b> <label class="float-right">{{viewaccount.customer.pan}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>Nationality</b> <label class="float-right">{{viewaccount.customer.nationality}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>Salary</b> <label class="float-right">{{viewaccount.customer.salary}}</label>
+        </li>
+        <li class="list-group-item">
+          <b>Address</b> <label class="float-right">{{viewaccount.customer.street+", "+viewaccount.customer.city+", "+viewaccount.customer.state+", "+viewaccount.customer.pin}}</label>
+        </li>
+      </ul>
+    </div>
+    <!-- /.card-body -->
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class=" p-0" href="#">
+      <img src=".\assets\img\rvrlogo.png" style="height: 70px;">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a routerLinkActive="active" href="" class="navbar-item" *ngIf="logged">Home</a>
+      <a routerLinkActive="active" href="/admindashboard" class="navbar-item" *ngIf="!logged && role==='employee'">Dashboard</a>
+      <a href="/customerdashboard" class="navbar-item" *ngIf="!logged && role==='customer'">Dashboard</a>
+      <a href="/services" class="navbar-item">Services</a>
+      <a href="/contact" class="navbar-item">Contact Us</a>
+      <a href="/about" class="navbar-item">About Us</a>
+
+      <div class="navbar-item has-dropdown is-hoverable" *ngIf="logged">
+        <a class="navbar-link">Login</a>
+        <div class="navbar-dropdown">
+          <a href="/customerlogin" class="navbar-item">Customer Login</a>
+          <a href="/adminlogin" class="navbar-item">Corporate(Admin) Login</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="navbar-item" *ngIf="!logged"><b>Welcome {{userName}}</b></div>
+    <div class="navbar-item" *ngIf="!logged">
+      <button color="warn" class="btn btn-info" (click)="Logout()">LogOut</button>
+    </div>
+  </div>
+
+</nav>
