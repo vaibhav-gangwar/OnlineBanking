@@ -11,10 +11,12 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './signup/signup.component';
 
 
-//Employee
+//Admin
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { ViewAllAccountComponent } from './components/admin/view-all-account/view-all-account.component';
 import { DeleteAccountComponent } from './components/admin/delete-account/delete-account.component';
+import { DebitfromaccountComponent } from './components/admin/debitfromaccount/debitfromaccount.component';
+import {CredittoaccountComponent} from './components/admin/credittoaccount/credittoaccount.component'
 
 //Customer
 import { BankLoginComponent } from './components/bank-login/bank-login.component';
@@ -26,7 +28,8 @@ import { FundTransferComponent } from './components/customer/fund-transfer/fund-
 import { CreateFdComponent } from './components/customer/create-fd/create-fd.component';
 
 const routes: Routes = [
-  
+  // { path: '**', component: PageNotFoundComponent },
+  // ,
   {
     path: '',
     component: HomeComponent,
@@ -85,6 +88,19 @@ const routes: Routes = [
   {
     path: "admindeleteaccount",
     component: DeleteAccountComponent,
+    pathMatch: "full"
+  }
+  ,
+
+  {
+    path: "admindebitaccount",
+    component: DebitfromaccountComponent,
+    pathMatch: "full"
+  }
+  ,
+  {
+    path: "admincreditaccount",
+    component: CredittoaccountComponent,
     pathMatch: "full"
   }
   //Customer Routing

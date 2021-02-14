@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
+
 import { NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from "@angular/common/http";
@@ -8,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -24,9 +26,7 @@ import { ContectComponent } from './components/contect/contect.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { AdminComponent } from './components/admin/admin.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
-import { ManageblogsComponent } from './components/admin/manageblogs/manageblogs.component';
-import { CategoriesComponent } from './components/admin/categories/categories.component';
-import { PagesComponent } from './components/admin/pages/pages.component';
+
 import { AuthService } from './auth.service';
 import { SignupComponent } from './signup/signup.component';
 import { CustomerdashboardComponent } from './components/customer/customerdashboard/customerdashboard.component';
@@ -36,6 +36,8 @@ import { FundTransferComponent } from './components/customer/fund-transfer/fund-
 import { CreateFdComponent } from './components/customer/create-fd/create-fd.component';
 import { ViewAllAccountComponent } from './components/admin/view-all-account/view-all-account.component';
 import { DeleteAccountComponent } from './components/admin/delete-account/delete-account.component';
+import { DebitfromaccountComponent } from './components/admin/debitfromaccount/debitfromaccount.component';
+import { CredittoaccountComponent } from './components/admin/credittoaccount/credittoaccount.component';
 
 
 @NgModule({
@@ -49,13 +51,12 @@ import { DeleteAccountComponent } from './components/admin/delete-account/delete
     LoginComponent,
     BankLoginComponent,
     AboutComponent,
+    // NotifierModule,
     ServiceComponent,
     ContectComponent,
     AdminComponent,
     DashboardComponent,
-    ManageblogsComponent,
-    CategoriesComponent,
-    PagesComponent,
+
     SignupComponent,
     CustomerdashboardComponent,
     OpenBankAccountComponent,
@@ -63,7 +64,10 @@ import { DeleteAccountComponent } from './components/admin/delete-account/delete
     FundTransferComponent,
     CreateFdComponent,
     ViewAllAccountComponent,
-    DeleteAccountComponent
+    DeleteAccountComponent,
+    DebitfromaccountComponent,
+    CredittoaccountComponent,
+
 
   ],
   imports: [
@@ -78,7 +82,8 @@ import { DeleteAccountComponent } from './components/admin/delete-account/delete
     MatTabsModule,
     MatMenuModule,
     MatProgressBarModule,
-    NgbModule
+    NgbModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuthService, HttpClient, NgModel, Title],
   bootstrap: [AppComponent]

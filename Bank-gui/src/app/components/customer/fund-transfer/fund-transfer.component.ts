@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { FundTransfer } from 'src/app/model/fundtransfer.model';
 import { AuthService } from '../../../auth.service';
 import { Customer } from '../../../model/customer.model';
@@ -19,7 +20,7 @@ export class FundTransferComponent implements OnInit {
       transferAmount: "",
     };
 
-  constructor(private authservice: AuthService, private _router: Router) { }
+  constructor(private authservice: AuthService, private _router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.fundtransfer.fromEmailId=localStorage.getItem("email");
@@ -31,7 +32,8 @@ export class FundTransferComponent implements OnInit {
 
     this.authservice.fundtransfer(this.fundtransfer).subscribe((res) => {
       if (res == null) {
-        alert("Fund Trasferred Succesflly");
+        //alert("Fund Trasferred Succesflly");
+        this.toastr.success('Fund Trasferred Succesfully', "Success");
         this._router.navigate(['/customerdashboard']);
       }else {
         console.log(res.error());

@@ -4,6 +4,8 @@ import { User } from './model/login.model';
 import { Observable } from 'rxjs';
 import { Customer } from './model/customer.model';
 import { FundTransfer } from './model/fundtransfer.model';
+import { DebitFromAccount } from './model/debitfromaccount.model';
+import { CreditToAccount } from './model/credittoaccount.model';
 
 @Injectable({
   providedIn: 'root'
@@ -67,5 +69,19 @@ export class AuthService {
   
   deleteCustomer(cust_id): Observable<any> {
     return this.httpclient.delete('http://localhost:8090/customer/delete?id='+cust_id);
+  }
+
+  debitfromaccount(debitfromaccount: DebitFromAccount ): Observable<any> {
+    let header = new HttpHeaders()
+    header.append('Content-Type', 'application/json');
+
+    return this.httpclient.post('http://localhost:8090/account/debitFromAccount', debitfromaccount, { headers: header });
+  }
+
+  credittoaccount(credittoaccount: CreditToAccount ): Observable<any> {
+    let header = new HttpHeaders()
+    header.append('Content-Type', 'application/json');
+
+    return this.httpclient.post('http://localhost:8090/account/creditToAccount', credittoaccount, { headers: header });
   }
 }

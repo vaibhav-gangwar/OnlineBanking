@@ -17,12 +17,15 @@ export class NavbarComponent implements OnInit {
   }
 
   Logout() {
-    alert("LogOut Successful");
+    // alert("LogOut Successful");
     localStorage.removeItem('userId')
     localStorage.removeItem('userName')
     localStorage.removeItem('email')
     localStorage.removeItem('role')
     this._router.navigate(['']);
+    
+    this.logged=true;
+    this.ngDoCheck();
   }
 
   changeMenuLink() {
@@ -32,6 +35,7 @@ export class NavbarComponent implements OnInit {
       this.logged = false;
     }
   }
+
   ngDoCheck() {
     this.changeMenuLink();
   }

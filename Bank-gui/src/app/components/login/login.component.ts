@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         console.log(res);
       }
       else if (res != null && res.customerid > 0) {
-alert("Login Successful");
+        // alert("Login Successful");
         this.customer = res;
         localStorage.setItem('userId', res.customerid);
         localStorage.setItem('userName', res.firstname + " " + res.middlename + " " + res.lastname);
